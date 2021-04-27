@@ -42,7 +42,7 @@ const NavList = styled.ul`
   .Active {
     text-decoration: none;
     li {
-      color: red;
+      color: #da3743;
     }
   }
 `;

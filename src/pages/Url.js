@@ -89,6 +89,7 @@ export default function Url() {
             name="date"
             value={state.date}
             ref={DateRef}
+            placeholder="yyyy-mm-dd"
             onChange={() => setState({ ...state, date: DateRef.current.value })}
             required="required"
           />

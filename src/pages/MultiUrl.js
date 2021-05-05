@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import RidCard from "../components/RidCard";
 import Link from "../components/Link";
 import styled from "styled-components";
 
@@ -47,16 +48,7 @@ export default function MutliUrl() {
         </Form>
         <RidContainer>
           {state.map((rid) => (
-            <RidCard key={rid}>
-              <RidButton
-                onClick={() =>
-                  setState(state.filter((number) => number !== rid))
-                }
-              >
-                X
-              </RidButton>
-              <RidText>{rid}</RidText>
-            </RidCard>
+            <RidCard key={rid} rid={rid} state={state} setter={setState} />
           ))}
         </RidContainer>
       </div>
@@ -71,37 +63,6 @@ const Form = styled.form`
 `;
 
 const RidContainer = styled.div`
-  margin-top: 2em;
-`;
-
-const RidButton = styled.button`
-  justify-self: center;
-  align-self: center;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  border: 1px solid #d8d9db;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  padding: 0px;
-  font-size: 15px;
-  background-color: white;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #da3743;
-    color: #ffffff;
-  }
-`;
-
-const RidCard = styled.div`
-  display: grid;
-  grid-template-columns: 3em auto;
-  padding: 0px;
-`;
-
-const RidText = styled.p`
-  margin-left: 1em;
+  margin-top: 2em;
 `;

@@ -64,5 +64,8 @@ const Form = styled.form`
 
 const RidContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 100%;
   margin-top: 2em;
 `;

@@ -17,6 +17,12 @@ export default function Nav({ routes }) {
         >
           <NavItem>Multi Restaurant Link</NavItem>
         </Link>
+        <Link
+          className={location.pathname === "/exp" ? "Active" : "Link"}
+          to="/exp"
+        >
+          <NavItem>Experience Link</NavItem>
+        </Link>
       </NavList>
 
       <Switch>

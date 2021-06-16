@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import Url from "./pages/Url";
 import MutliUrl from "./pages/MultiUrl";
+import Exp from "./pages/Exp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     path: "/multi",
     exact: true,
     main: () => <MutliUrl />,
+  },
+  {
+    path: "/exp",
+    exact: true,
+    main: () => <Exp />,
   },
 ];
 

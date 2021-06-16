@@ -13,6 +13,7 @@ export default function Link({ url }) {
     navigator.clipboard.writeText(url);
     !copied && setCopied(!copied);
   };
+
   return url ? (
     <LinkBlock>
       <Pre>
@@ -24,6 +25,7 @@ export default function Link({ url }) {
     </LinkBlock>
   ) : null;
 }
+
 const CopyButton = styled.button`
   justify-self: start;
   font-size: 15px;

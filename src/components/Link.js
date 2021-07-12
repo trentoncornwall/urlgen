@@ -10,8 +10,9 @@ export default function Link({ url }) {
     e.preventDefault();
 
     //Copy Function
-    navigator.clipboard.writeText(url);
-    !copied && setCopied(!copied);
+    navigator.clipboard.writeText(url).then(function () {
+      !copied && setCopied(!copied);
+    });
   };
 
   return url ? (
